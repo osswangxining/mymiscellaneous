@@ -5,13 +5,13 @@
 	<artifactId>mymiscellaneous</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<!--netty sample -->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
 			<version>4.1.19.Final</version>
 		</dependency>
-
+        <!-- dubbo sample -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
@@ -22,13 +22,13 @@
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.6</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
 			<version>0.1</version>
 		</dependency>
 		
+		<!-- polygon sample -->
 		<dependency>
             <groupId>polygon-contains-point</groupId>
             <artifactId>polygon</artifactId>
@@ -36,5 +36,40 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/polygon-1.0.2.jar</systemPath>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.3</version>
+        </dependency>
+        
 	</dependencies>
+	<build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>log4j.properties</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>
